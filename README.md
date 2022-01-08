@@ -70,9 +70,9 @@
 - Click on Go to Shipping Page Button
 - Wait for Complete Pageload
 - Fill-up forms wih with name & phone number
-- Select বান্দরবান form drop-down as a City
-- Select রোয়াংছড়ি form drop-down as an Area
-- Select নোয়াপতং ইউনিয়ন form drop-down as a Zone
+- Select বান্দরবান from drop-down as a City
+- Select রোয়াংছড়ি from drop-down as an Area
+- Select নোয়াপতং ইউনিয়ন from drop-down as a Zone
 - Provide address text in text field 
 - Select COD as payment option
 - Scroll-down & Highlights Confirm Order Button
@@ -82,7 +82,7 @@
 ### TestCase 06: Test_006_Logout
 
 - Click on User Name Button
-- Click on User sign Out Button form drop-down 
+- Click on User sign Out Button from drop-down 
 - Perform unit testng
 - Take Screenshot
 - Close browser
