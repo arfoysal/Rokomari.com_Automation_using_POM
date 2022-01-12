@@ -1,6 +1,7 @@
 
 # Rokomari.com Automation using using Page object Model
-
+# [Live Allure Report](https://rokomari-report-arfoysal.netlify.app/)
+## Link: https://rokomari-report-arfoysal.netlify.app/
 ## Technology used
   
 - Test tool:  Selenium Webdriver 
