@@ -36,16 +36,16 @@
 - Go to Rokomari Web Site
 - Maximize the browser window
 - Wait for complete Pageload
-- Perform Unit testng 
+- Perform testng 
 - Take a screenshot 
 
 ### TestCase 02: Test_002_SignUpWithGoogle
 
 - Hover on Sign In button
 - click on Sign up with Google button
-- Perform unit testng
+- Perform testng
 - Provide gmail credential and complete Sign up/ Sign IN
-- Perform unit testng & highlights username 
+- Perform testng & highlights username 
 - Take a screenshot 
 
 ### TestCase 03: Test_003_SelectProduct
@@ -55,14 +55,14 @@
 - Scroll down and and click on next for move to nextpage 
 - Wait for Complete Pageload
 - Select the fourth book on the page to add-to-card
-- Perform unit testng
+- Perform testng
 - Take screenshot
 
 ### TestCase 04: Test_004_MyCartPage
 
 - Click cart icon to go-to My-cart page 
 - Wait for Complete Pageload
-- Perform unit testng
+- Perform testng
 - Take screenshot
 
 ### TestCase 05: Test_005_ShippingPage
@@ -76,14 +76,14 @@
 - Provide address text in text field 
 - Select COD as payment option
 - Scroll-down & Highlights Confirm Order Button
-- Perform unit testng
+- Perform testng
 - Take Screenshot
 
 ### TestCase 06: Test_006_Logout
 
 - Click on User Name Button
 - Click on User sign Out Button from drop-down 
-- Perform unit testng
+- Perform testng
 - Take Screenshot
 - Close browser
 
@@ -91,7 +91,7 @@
 ## Run the script:
 - Right Click on testng.xml file
 - Then select Run as TestNG
-- Run the Test Cases
+- Run the Cases
 - Close the program
 
 

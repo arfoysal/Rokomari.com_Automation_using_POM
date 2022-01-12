@@ -7,6 +7,7 @@ import java.io.IOException;
 import org.testng.annotations.Test;
 
 import driverPackage.BaseDriver;
+import io.qameta.allure.Description;
 import model.Locators;
 import model.Take_Screenshot;
 import model.Timeout;
@@ -15,15 +16,21 @@ import pages.HomePage;
 public class Test_001_HomePage extends BaseDriver{
 	HomePage homePage = new HomePage();
 	Timeout time = new Timeout();
-	Take_Screenshot screenshot = new Take_Screenshot();
 	Locators lc = new Locators();
-	@Test
+	Take_Screenshot screenshot = new Take_Screenshot();
+	@Test(description = "Open rokomari.com in the browser and perform Tests")
+	@Description("Test Description: Tins test will wait to completely load the home page of Rokomari "
+			+ "then perform testing & take a screenshot.")
 	public void homePageTest() throws IOException {
 		time.waitForPageLoad();
 		assertEquals(homePage.getCurrentUrl(), lc.homePageUrl);
-		assertEquals(homePage.getTitle(), lc.homePageTitle);
-		time.timeOut();	
-		screenshot.screenshot("HomePage");	
+		time.timeOut(1000);	
+		assertEquals(homePage.pagetitle(), lc.homePageTitle);
+		time.timeOut(1000);	
+		screenshot.takeScreenShot("Homepage");
+		
+		homePage.closePopupBannaer();
+		screenshot.takeScreenShot("Homepage");
 	}
 
 }

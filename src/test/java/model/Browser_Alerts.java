@@ -1,7 +1,6 @@
 package model;
 
 import org.openqa.selenium.Alert;
-import org.openqa.selenium.WebDriver;
 
 public class Browser_Alerts {
 	Timeout time = new Timeout();

@@ -1,4 +1,5 @@
 .env
+/allure-results/
 test-output
 /target/
 ### Eclipse ###

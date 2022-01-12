@@ -34,6 +34,7 @@ public class BaseDriver {
 			driver = new FirefoxDriver();
 			
 		}
+	
 		else if(browser.contains("htmlunit")) {
 			driver = new HtmlUnitDriver();
 			
@@ -43,11 +44,13 @@ public class BaseDriver {
 		
 		PageDriver.getInstance().setDriver(driver);
 	}
+	
 
 	@AfterSuite
 	public void tearDown() {
 		PageDriver.getCurrentDriver().quit();
 
 	}
-
+	
+	
 }

@@ -1,6 +1,5 @@
 package model;
 
-import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
@@ -39,6 +38,10 @@ public class CommonMethods {
 		return PageDriver.getCurrentDriver().findElements(element).size();
 	}
 	
+	public String getAttributeValue(By element, String attribute) {
+		return PageDriver.getCurrentDriver().findElement(element).getAttribute(attribute);
+	}
+	
 	public List<WebElement> getEls(By element) {
 		return PageDriver.getCurrentDriver().findElements(element);
 	}
@@ -48,6 +51,8 @@ public class CommonMethods {
 		PageDriver.getCurrentDriver().findElement(element).sendKeys(value);
 
 	}
+	
+	
 	public void hover(By element) {
 		WebElement btn= PageDriver.getCurrentDriver().findElement(element);
 		Actions actions = new Actions(PageDriver.getCurrentDriver());
@@ -65,7 +70,14 @@ public class CommonMethods {
 	public void selectitem(By element, String visibleText) {
 		Select selectItems = new Select(PageDriver.getCurrentDriver().findElement(element));
 		selectItems.selectByVisibleText(visibleText);
+		
 	}
+	public String currentlySelecteditem(By element) {
+		Select selectItems = new Select(PageDriver.getCurrentDriver().findElement(element));
+		return selectItems.getFirstSelectedOption().getText();
+		
+	}
+	
 	
 	public void listitem(By element, String visibleText) {
 		List<WebElement> listItems =  PageDriver.getCurrentDriver().findElements(element);
@@ -76,6 +88,16 @@ public class CommonMethods {
 			}
 		}
 	}
+	public Boolean itemSelecteStatus(By element, String value) {
+		List<WebElement> listItems =  PageDriver.getCurrentDriver().findElements(element);
+		for(WebElement item : listItems) {
+			if(item.getAttribute("value").equals(value)) {
+				return item.isSelected();	
+			}
+		}
+		return false;
+	}
+	
 	public void clickOnAButtonJs(String script) {
 		JavascriptExecutor js = (JavascriptExecutor) PageDriver.getCurrentDriver();
 		WebElement el = (WebElement)(js.executeScript("return "+ script));
@@ -97,6 +119,7 @@ public class CommonMethods {
 		JavascriptExecutor js = (JavascriptExecutor) PageDriver.getCurrentDriver();
 		js.executeScript("document.querySelector('"+cssLocator+"').scrollBy("+offsetX+","+offsetY+");");
 	}
+	
 	public void windows() {
 		 Set<String> handles = PageDriver.getCurrentDriver().getWindowHandles();
 	}
