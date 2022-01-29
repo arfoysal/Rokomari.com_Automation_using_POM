@@ -36,6 +36,7 @@ public class Timeout {
 	}
 	public void waitForEl(By locator) {
 		wait = new WebDriverWait(PageDriver.getCurrentDriver(), Duration.ofSeconds(30));
+		
 		wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 	}
 	public void waitForPageLoad() {

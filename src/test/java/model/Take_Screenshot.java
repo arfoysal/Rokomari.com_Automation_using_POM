@@ -20,13 +20,13 @@ public class Take_Screenshot {
 
 	public void screenshot(String name) throws IOException {
 		String strtime = setdate();
-		File scFile = ((TakesScreenshot)PageDriver.getCurrentDriver()).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(scFile,new File("./image/"+strtime+"_"+name+".png"));
+		File scrFile = ((TakesScreenshot)PageDriver.getCurrentDriver()).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(scrFile,new File("./image/"+strtime+"_"+name+".png"));
 	}
 	public void screenshot(String name, WebElement element) throws IOException {
 		String strtime = setdate();
-		File scFile = element.getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(scFile,new File("./image/"+strtime+name+".png"));
+		File scrFile = element.getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(scrFile,new File("./image/"+strtime+name+".png"));
 	}
 	
 	public String setdate() {
